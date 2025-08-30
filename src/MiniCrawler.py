@@ -10,10 +10,10 @@ import re # Para expresiones regulares, útil para robots.txt
 
 console = Console()
 VISITED = set()     
-QUEUE = ["https://unae.edu.py/tv/"] #URL de la Une (Cambiar esto para la nueva URL)
+QUEUE = ["https://unae.edu.py/tv/"]
 MAX_PAGES = 50     
 DELAY_BETWEEN_REQUESTS = 1 
-DOMAIN_TARGET = "unae.edu.py" #Dominio (Cambiarlo tambien)
+DOMAIN_TARGET = "unae.edu.py"
 
 
 ROBOTS_RULES = {}
