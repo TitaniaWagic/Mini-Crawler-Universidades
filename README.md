@@ -1,5 +1,5 @@
 # Mini-Crawler-Universidades
-Este proyecto contiene un prototipo de agente crawler diseñado por DataExplore para rastrear páginas web de universidades paraguayas. El objetivo principal es mantener un índice actualizado de carreras y mallas curriculares, y detectar cambios en la oferta académica.
+Prototipo de agente crawler desarrollado para la empresa ficticia DataExplorer. Este agente rastrea sitios web de universidades paraguayas y muestra en tiempo real el tráfico HTTP, generando métricas de rendimiento y respetando las políticas de crawling.
 
 Actualmente, el crawler está configurado para rastrear `www.unae.edu.py`.
 
