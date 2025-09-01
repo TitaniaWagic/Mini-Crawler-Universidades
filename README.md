@@ -6,7 +6,7 @@ Actualmente, el crawler está configurado para rastrear `www.unae.edu.py`.
 
 ## Características
 
-*   **Rastreo Adaptable:** Configurado para `www.une.edu.py`. Fácilmente configurable para otros dominios cambiando `DOMAIN_TARGET` en `main_crawler.py`.
+*   **Rastreo Adaptable:** Configurado para `www.unae.edu.py`. Fácilmente configurable para otros dominios cambiando `DOMAIN_TARGET` en `main_crawler.py`.
 *   **Respeto a `robots.txt`:** Descarga y parsea el archivo `robots.txt` del sitio web objetivo, respetando las directivas `Disallow` y `Allow`.
 *   **Control de Frecuencia:** Limita las solicitudes a un máximo de 1 por segundo para evitar sobrecargar el servidor del sitio web.
 *   **Logging Detallado:**
