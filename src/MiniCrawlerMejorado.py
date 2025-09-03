@@ -17,7 +17,7 @@ DOMAIN_TARGET = "unae.edu.py"
 
 ROBOTS_RULES = {}
 
-# Configurar session con pooling simple (Opción 3 recomendada)
+# Configurar session con pooling simple
 def create_session():
     """Crea una session con pooling de conexiones HTTP Keep-Alive"""
     session = requests.Session()
@@ -142,8 +142,6 @@ if __name__ == "__main__":
         table.add_column("Permitido", style="white")
 
         count = 0
-        total_time_saved = 0
-        connection_reuse_count = 0
         
         while QUEUE and count < MAX_PAGES:
             url_to_crawl = QUEUE.pop(0)
@@ -167,11 +165,6 @@ if __name__ == "__main__":
 
                 status_code = r.status_code
                 response_time = round(end_request_time - start_request_time, 2)
-
-                # Estadísticas de performance
-                if count > 0 and response_time < 0.2:  # Si es más rápido de lo normal
-                    total_time_saved += 0.3 - response_time  # Estimado de ahorro
-                    connection_reuse_count += 1
 
                 soup = BeautifulSoup(r.text, "html.parser")
 
@@ -233,6 +226,4 @@ if __name__ == "__main__":
     session.close()
     
     console.print(f"\n[bold green]Rastreo completado para {DOMAIN_TARGET}. Se visitaron {count} páginas.[/bold green]")
-    console.print(f"[green]Conexiones reutilizadas: {connection_reuse_count}[/green]")
-    console.print(f"[green]Tiempo estimado ahorrado con Keep-Alive: {round(total_time_saved, 2)}s[/green]")
     console.print("Los resultados se han guardado en [bold cyan]crawler_log.csv[/bold cyan]")
