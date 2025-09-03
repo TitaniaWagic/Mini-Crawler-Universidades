@@ -11,7 +11,7 @@ from requests.adapters import HTTPAdapter
 console = Console()
 VISITED = set()     
 QUEUE = ["https://unae.edu.py/tv/"]
-MAX_PAGES = 5  
+MAX_PAGES = 50  
 DELAY_BETWEEN_REQUESTS = 1 
 DOMAIN_TARGET = "unae.edu.py"
 
